@@ -18,7 +18,7 @@ This app was devloped in Windows 11. It uses Geant4 version 11.1.2, and CMake ve
 # Features of G4-Hello-World:
 
 - [Simple UI or Batch mode Geant4 application](#simple-ui-or-batch-mode-geant4-application)
-- [Geant4 License](geant4-license)
+- [Geant4 License](#geant4-license)
 - [Pre-Configured CMakeLists.txt](#pre-configured-cmakelists.txt)
 - [Connection to Geant4 source code](#connection-to-geant4-source-code)
 - [Link to src and include folders](#link-to-src-and-include-folders)
