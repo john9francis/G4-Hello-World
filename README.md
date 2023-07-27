@@ -19,7 +19,7 @@ This app was devloped in Windows 11. It uses Geant4 version 11.1.2, and CMake ve
 
 - [Simple UI or Batch mode Geant4 application](#simple-ui-or-batch-mode-geant4-application)
 - [Geant4 License](#geant4-license)
-- [Pre-Configured CMakeLists.txt](#pre-configured-cmakelists-txt)
+- [Pre-Configured CMakeLists file](#pre-configured-cmakelists-file)
 - [Connection to Geant4 source code](#connection-to-geant4-source-code)
 - [Link to src and include folders](#link-to-src-and-include-folders)
 - [Automatic mac file copying](#automatic-mac-file-copying)
@@ -37,7 +37,7 @@ The second method runs much faster especially when modelling several particle in
 
 G4 Hello World comes with the Geant4 software License already included, so no need to worry about legal issues when developing open source Geant4 applications. 
 
-## Pre-Configured CMakeLists.txt
+## Pre-Configured CMakeLists file
 
 Save hours configuring your CMakeLists.txt file by using G4 Hello World. G4 Hello World uses similar cmake configurations that can be found in official Geant4 example applications, as well as some helpful additions. 
 
