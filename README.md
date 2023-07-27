@@ -16,6 +16,15 @@ To use, download the source code from the latest release, and open the project i
 This app was devloped in Windows 11. It uses Geant4 version 11.1.2, and CMake version 3.16 and above.
 
 # Features of G4-Hello-World:
+
+- [Simple UI or Batch mode Geant4 application](#simple-ui-or-batch-mode-geant4-application)
+- [Geant4 License](geant4-license)
+- [Pre-Configured CMakeLists.txt](#pre-configured-cmakelists.txt)
+- [Connection to Geant4 source code](#connection-to-geant4-source-code)
+- [Link to src and include folders](#link-to-src-and-include-folders)
+- [Automatic mac file copying](#automatic-mac-file-copying)
+- [Simple gitignore file](#simple-gitignore-file)
+
 ## Simple UI or Batch mode Geant4 application
 
 This app supports both UI and Batch modes for Geant4 devloping. In other words, you can either double click on the Hello_World.exe file to run, or run from the terminal by the command, 
@@ -36,7 +45,7 @@ Save hours configuring your CMakeLists.txt file by using G4 Hello World. G4 Hell
 
 As long as you have correctly installed the Geant4 source code on your computer, G4 Hello World will automatically link to the Geant4 source code right away. This way you can start including G4 headers without missing a beat. 
 
-## link to src and include folders
+## Link to src and include folders
 
 G4 Hello World's CMakeLists.txt file automatically configures your project's include and src directories. The project will expect your "src" directory to contain any .cc files where you define your own classes, and it will expect to find your own .hh files in the "include" directory. 
 
