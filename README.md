@@ -26,11 +26,11 @@ This app was devloped in Windows 11. It uses Geant4 version 11.1.2, and CMake ve
 # Features of G4-Hello-World:
 
 - [Simple UI or Batch mode Geant4 application](#simple-ui-or-batch-mode-geant4-application)
-- [Geant4 License](#geant4-license)
 - [Pre-Configured CMakeLists file](#pre-configured-cmakelists-file)
 - [Connection to Geant4 source code](#connection-to-geant4-source-code)
 - [Link to src and include folders](#link-to-src-and-include-folders)
 - [Automatic mac file copying](#automatic-mac-file-copying)
+- [Geant4 License](#geant4-license)
 - [Simple gitignore file](#simple-gitignore-file)
 
 ## Simple UI or Batch mode Geant4 application
@@ -40,10 +40,6 @@ This app supports both UI and Batch modes for Geant4 devloping. In other words, 
 .\Hello_World test.mac
 ```
 The second method runs much faster especially when modelling several particle interactions.
-
-## Geant4 License
-
-G4 Hello World comes with the Geant4 software License already included, so no need to worry about legal issues when developing open source Geant4 applications. 
 
 ## Pre-Configured CMakeLists file
 
@@ -60,6 +56,10 @@ G4 Hello World's CMakeLists.txt file automatically configures your project's inc
 ## Automatic mac file copying
 
 An added bonus to G4 Hello World is automatic mac file copying. Upon building, G4 Hello World will copy all mac files in the "mac_files" directory into the same directory as the .exe file. This way your application can run the mac files without errors. 
+
+## Geant4 License
+
+G4 Hello World comes with the Geant4 software License already included, so no need to worry about legal issues when developing open source Geant4 applications. 
 
 ## Simple gitignore file
 
