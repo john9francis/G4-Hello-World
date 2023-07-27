@@ -17,6 +17,8 @@ To run G4 Hello World, download the source code, and compile it with cmake. This
 
 G4 Hello World is designed to be converted into your own Geant4 project. To start developing, download the source code from the latest release, and open the project in visual studio. Simply perform a "find and replace" in the CMakeLists.txt replacing all instances of "Hello_World" with the name of your desired app. Also rename Hello_World.cc to your desired app name. Then, after compiling again to make sure there are no errors, you're ready to start writing your Geant4 app. 
 
+For more help, checkout my [G4 Hello World Software Demo Video](https://www.youtube.com/channel/UCDJQomy5ICn2fkJWiCm9Dig)
+
 # Versions
 
 This app was devloped in Windows 11. It uses Geant4 version 11.1.2, and CMake version 3.16 and above. (Release for macOS coming soon...)
