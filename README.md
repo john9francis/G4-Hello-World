@@ -6,7 +6,7 @@ Author: [John Francis](https://github.com/john9francis) 7/26/2023
 
 # Overview
 
-[!Geant4 Hello World Screenshot](g4_hello_world.png)
+![Geant4 Hello World Screenshot](g4_hello_world.png)
 
 G4 Hello World is an extremely simple Geant4 application to quickly start developing apps. It includes many helpful features, while still staying as simple and as generic as possible.
 
