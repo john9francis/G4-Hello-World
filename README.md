@@ -20,7 +20,7 @@ To run G4 Hello World, download the source code, and compile it with cmake. This
 
 To run without the Geant4 GUI, you can go to the directory where G4-Hello-World is and run,
 ```
-.\Hello-World test.mac
+.\Hello_World test.mac
 ```
 And "Hello World" should display in the console.
 
