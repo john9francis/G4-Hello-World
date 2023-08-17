@@ -18,6 +18,12 @@ Before using G4 Hello World, you must have the Geant4 source code, cmake, and vi
 
 To run G4 Hello World, download the source code, and compile it with cmake. This will create a build directory with an executible file in the "release" directory. Clicking on this file should open a Geant4 GUI. Once in the GUI, you can run test.mac to display "Hello World" in the output console.
 
+To run without the Geant4 GUI, you can go to the directory where G4-Hello-World is and run,
+```
+.\Hello-World test.mac
+```
+And "Hello World" should display in the console.
+
 G4 Hello World is designed to be converted into your own Geant4 project. To start developing, download the source code from the latest release, and open the project in visual studio. Simply perform a "find and replace" in the CMakeLists.txt replacing all instances of "Hello_World" with the name of your desired app. Also rename Hello_World.cc to your desired app name. Then, after compiling again to make sure there are no errors, you're ready to start writing your Geant4 app. 
 
 For more help, check out my [G4 Hello World Software Demo Video](https://youtu.be/s4qR-ljQbRc)
