@@ -73,3 +73,8 @@ if(WIN32)
   # https://stackoverflow.com/a/37994396/1801749
   set_property(DIRECTORY PROPERTY VS_STARTUP_PROJECT Hello_World)
 endif()
+
+#----------------------------------------------------------------------------
+# Install the executable to 'bin' directory under CMAKE_INSTALL_PREFIX
+#
+install(TARGETS Hello_World DESTINATION bin)
