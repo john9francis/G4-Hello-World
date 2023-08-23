@@ -51,6 +51,20 @@ if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET Hello_World PROPERTY CXX_STANDARD 20)
 endif()
 
+
+#----------------------------------------------------------------------------
+# remove Debug and other unnecessary configurations
+set(CMAKE_CONFIGURATION_TYPES "Release" CACHE INTERNAL "")
+
+# ---------------------------------------------------------------------------
+# Set startup project for visual studio
+set_property(DIRECTORY PROPERTY VS_STARTUP_PROJECT Hello_World)
+
+#----------------------------------------------------------------------------
+# Install the executable to 'bin' directory under CMAKE_INSTALL_PREFIX
+#
+install(TARGETS Hello_World DESTINATION bin)
+
 #----------------------------------------------------------------------------
 # Copy all the mac files from "mac_files" directory into the
 # same directory as the executable.
@@ -58,19 +72,22 @@ file(GLOB Hello_World-SCRIPTS ${PROJECT_SOURCE_DIR}/mac_files/*)
 
 foreach(_script ${Hello_World-SCRIPTS})
   get_filename_component(_script_name ${_script} NAME)
-  configure_file(
-	  ${_script}
-	  ${PROJECT_BINARY_DIR}/Release/${_script_name}
-	  COPYONLY
+  install(
+    FILES ${_script}
+    DESTINATION bin
   )
 endforeach()
 
 #----------------------------------------------------------------------------
-# remove Debug and other unnecessary configurations
-set(CMAKE_CONFIGURATION_TYPES "Release" CACHE INTERNAL "")
-set_property(DIRECTORY PROPERTY VS_STARTUP_PROJECT Hello_World)
-
-#----------------------------------------------------------------------------
-# Install the executable to 'bin' directory under CMAKE_INSTALL_PREFIX
+# For windows, copy the mac files into the release dir, just for convenience.
 #
-install(TARGETS Hello_World DESTINATION bin)
+if(WIN32)
+  foreach(_script ${Hello_World-SCRIPTS})
+    get_filename_component(_script_name ${_script} NAME)
+    configure_file(
+      ${_script}
+      ${PROJECT_BINARY_DIR}/Release/${_script_name}
+      COPYONLY
+    )
+  endforeach()
+endif()
