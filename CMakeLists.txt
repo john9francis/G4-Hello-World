@@ -66,13 +66,9 @@ foreach(_script ${Hello_World-SCRIPTS})
 endforeach()
 
 #----------------------------------------------------------------------------
-# When the project is WIN32, set release settings.
-if(WIN32)
-  # remove Debug and other unnecessary configurations
-  set(CMAKE_CONFIGURATION_TYPES "Release" CACHE INTERNAL "")
-  # https://stackoverflow.com/a/37994396/1801749
-  set_property(DIRECTORY PROPERTY VS_STARTUP_PROJECT Hello_World)
-endif()
+# remove Debug and other unnecessary configurations
+set(CMAKE_CONFIGURATION_TYPES "Release" CACHE INTERNAL "")
+set_property(DIRECTORY PROPERTY VS_STARTUP_PROJECT Hello_World)
 
 #----------------------------------------------------------------------------
 # Install the executable to 'bin' directory under CMAKE_INSTALL_PREFIX
