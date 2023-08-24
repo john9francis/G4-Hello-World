@@ -8,7 +8,7 @@ WORKDIR /app
 # Copy the CMake project files into the container
 COPY . .
 
-RUN apt install -y wget
+RUN apt update && apt install -y wget
 
 # Get miniconda
 RUN wget -q https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
