@@ -1,7 +1,7 @@
 # G4-Hello-World
 Author: [John Francis](https://github.com/john9francis) 7/26/2023
 
-[![Latest release](https://img.shields.io/badge/Release:-v0.1.0-violet)](https://github.com/john9francis/G4-Hello-World/releases/latest) 
+[![Latest release](https://img.shields.io/badge/Release:-v0.1.1-violet)](https://github.com/john9francis/G4-Hello-World/releases/latest) 
 [![Software Demo Video](https://img.shields.io/badge/Software_demo-YouTube-red)](https://youtu.be/s4qR-ljQbRc)
 
 # Overview
