@@ -40,6 +40,10 @@ ARG CORES=$(nproc)
 # Create a build directory and compile the project
 WORKDIR /app/build
 COPY . /app
+
+# Activate the geant4env Conda environment before running cmake
+RUN echo "conda activate geant4env" >> /root/.bashrc
+SHELL ["/bin/bash", "--login", "-c"]
 RUN cmake .. && make -j "$CORES" && make install
 
 # Set the entry point to run the compiled project
