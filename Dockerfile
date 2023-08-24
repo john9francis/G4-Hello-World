@@ -8,9 +8,7 @@ WORKDIR /app
 # Copy the CMake project files into the container
 COPY . .
 
-RUN apt update && apt install -y \
-  build-essential \
-  wget
+RUN apt install -y wget
 
 # Get miniconda
 RUN wget -q https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
@@ -26,7 +24,9 @@ RUN /bin/bash Miniconda3-latest-Linux-x86_64.sh -b -p /opt/conda && \
 ENV PATH="/opt/conda/bin:$PATH"
 
 # Install additional apt dependencies
-RUN apt-get install -y libgl1-mesa-glx libxrender1
+RUN apt install -y libgl1-mesa-glx \
+  libxrender1 \
+  cmake
 
 # Copy the Conda environment YAML file into the container
 COPY environment.yml .
