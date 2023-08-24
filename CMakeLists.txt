@@ -70,13 +70,16 @@ install(TARGETS Hello_World DESTINATION bin)
 # same directory as the executable.
 file(GLOB Hello_World-SCRIPTS ${PROJECT_SOURCE_DIR}/mac_files/*)
 
+
 foreach(_script ${Hello_World-SCRIPTS})
+  get_filename_component(_script_name ${_script} NAME)
   configure_file(
-    ${PROJECT_SOURCE_DIR}/${_script}
-    ${PROJECT_BINARY_DIR}/${_script}
+    ${_script}
+    ${PROJECT_BINARY_DIR}/${_script_name}
     COPYONLY
-    )
+  )
 endforeach()
+
 
 #----------------------------------------------------------------------------
 # For windows, copy the mac files into the release dir, just for convenience.
