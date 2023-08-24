@@ -71,11 +71,11 @@ install(TARGETS Hello_World DESTINATION bin)
 file(GLOB Hello_World-SCRIPTS ${PROJECT_SOURCE_DIR}/mac_files/*)
 
 foreach(_script ${Hello_World-SCRIPTS})
-  get_filename_component(_script_name ${_script} NAME)
-  install(
-    FILES ${_script}
-    DESTINATION bin
-  )
+  configure_file(
+    ${PROJECT_SOURCE_DIR}/${_script}
+    ${PROJECT_BINARY_DIR}/${_script}
+    COPYONLY
+    )
 endforeach()
 
 #----------------------------------------------------------------------------
