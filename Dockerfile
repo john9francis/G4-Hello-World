@@ -22,6 +22,36 @@ RUN conda update -y conda && \
 # Create conda geant4 environment and install geant4 in it
 RUN conda create -y -c conda-forge --name geant4env geant4
 
+# DEPENDENCIES
+# conda dependencies
+RUN conda install -y -c conda-forge \
+    make \
+    cmake \
+    compilers \
+    sed \
+    mesa-libgl-devel-cos6-x86_64 \
+    mesa-dri-drivers-cos6-x86_64 \
+    libselinux-cos6-x86_64 \
+    libxdamage-cos6-x86_64 \
+    libxxf86vm-cos6-x86_64 \
+    python=3.9 \
+    boost=1.72.0 \
+    clhep=2.4.4.0 \
+    expat \
+    freetype \
+    libglu \
+    qt=5.12 \
+    xerces-c \
+    xorg-libx11 \
+    xorg-libxfixes \
+    xorg-libxmu \
+    zlib \
+    xorg-libxfixes \
+    libxext-cos6-x86_64
+
+
+# apt dependencies
+
 # Set the working directory inside the container
 WORKDIR /app
 
