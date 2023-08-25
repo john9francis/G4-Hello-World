@@ -32,3 +32,9 @@
 **/values.dev.yaml
 LICENSE
 README.md
+
+# Build files
+.vs/
+out/
+build/
+dockerbuild/
