@@ -63,14 +63,6 @@ WORKDIR /app
 # Copy the CMake project files into the container
 COPY . .
 
-# Make the build dir
-RUN mkdir dockerbuild && \
-    cd dockerbuild && \
-    echo "conda activate geant4env" >> /root/.bashrc && \
-    cmake .. && \
-    make && \
-    make install
-
 # Copy the shell script into the container
 COPY dockerfile_script.sh /app/dockerfile_script.sh
 
