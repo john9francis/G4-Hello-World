@@ -51,6 +51,9 @@ RUN conda install -y -c conda-forge \
 
 
 # apt dependencies
+RUN apt install -y \
+    libgl1-mesa-glx \
+    libxrender1
 
 # Set the working directory inside the container
 WORKDIR /app
