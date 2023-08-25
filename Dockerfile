@@ -64,9 +64,9 @@ WORKDIR /app
 COPY . .
 
 # Make the build dir
-RUN mkdir dockerbuild && cd dockerbuild
-
-RUN conda activate geant4env && \
+RUN mkdir dockerbuild && \
+    cd dockerbuild && \
+    echo "conda activate geant4env" >> /root/.bashrc && \
     cmake .. && \
     make && \
     make install
