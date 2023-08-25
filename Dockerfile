@@ -38,7 +38,7 @@ RUN conda env create -f environment.yml && conda clean -afy
 ARG CORES=$(nproc)
 
 # Create a build directory and compile the project
-WORKDIR /app/build
+WORKDIR /app/dockerbuild
 COPY . /app
 
 # Activate the geant4env Conda environment before running cmake
