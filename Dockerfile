@@ -14,6 +14,14 @@ RUN wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh &
 # Add conda to PATH
 ENV PATH="/opt/conda/bin:$PATH"
 
+# Update conda, add conda-forge channel, and clean cache
+RUN conda update -y conda && \
+    conda config --add channels conda-forge && \
+    conda clean -y -all
+
+# Create conda geant4 environment and install geant4 in it
+RUN conda create -y -c conda-forge --name geant4env geant4
+
 # Set the working directory inside the container
 WORKDIR /app
 
