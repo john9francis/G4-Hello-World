@@ -2,9 +2,17 @@
 
 FROM ubuntu:20.04
 
-# install prerequisites
+# install miniconda
 RUN apt update && apt install -y wget
-RUN wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+
+# Download and install Miniconda
+RUN wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh && \
+    chmod +x Miniconda3-latest-Linux-x86_64.sh && \
+    ./Miniconda3-latest-Linux-x86_64.sh -b -p /opt/conda && \
+    rm Miniconda3-latest-Linux-x86_64.sh
+
+# Add conda to PATH
+ENV PATH="/opt/conda/bin:$PATH"
 
 # Set the working directory inside the container
 WORKDIR /app
