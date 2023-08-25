@@ -55,11 +55,21 @@ RUN apt install -y \
     libgl1-mesa-glx \
     libxrender1
 
+# End of Geant4 setup
+
 # Set the working directory inside the container
 WORKDIR /app
 
 # Copy the CMake project files into the container
 COPY . .
+
+# Make the build dir
+RUN mkdir dockerbuild && cd dockerbuild
+
+RUN conda activate geant4env && \
+    cmake .. && \
+    make && \
+    make install
 
 # Copy the shell script into the container
 COPY dockerfile_script.sh /app/dockerfile_script.sh
