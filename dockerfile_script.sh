@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# See what i'm working with
-pwd
-cd ..
-ls
+# We're starting off in the app/ dir
+# and the whole cmake project is copied into it.
+
+echo $PATH
