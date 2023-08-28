@@ -30,9 +30,9 @@ RUN wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh &
 #
 
 # Add conda to PATH
-# ENV PATH="/opt/conda/bin:$PATH"
-RUN echo 'export PATH="$PATH:\opt\conda\bin"' >> ~/.bashrc && \
-    source ~/.bashrc
+ENV PATH="/opt/conda/bin:$PATH"
+#RUN echo 'export PATH="$PATH:\opt\conda\bin"' >> ~/.bashrc && \
+#    source ~/.bashrc
 
 # Update conda, add conda-forge channel, and clean cache
 RUN conda update -y conda && \

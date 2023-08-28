@@ -8,8 +8,10 @@ cd dockerbuild
 conda activate geant4env
 
 # Cmake the project
-conda run -n geant4env cmake .. CMAKE_PREFIX_PATH=/opt/miniconda3/envs/geant4env/lib/Geant4
+cmake ..
 make
 make install
+
+conda deactivate
 
 echo "done"
